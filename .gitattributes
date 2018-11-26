@@ -1,2 +1,3 @@
 *.pub filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
+testdir filter=git-crypt diff=git-crypt
