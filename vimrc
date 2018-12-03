@@ -4,6 +4,9 @@ set background=dark
 set t_Co=256
 set synmaxcol=2048
 "":set clipboard^=unnamed
+:nmap <F1> <nop>
+
+
 
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
@@ -85,8 +88,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fugitive'
 Plugin 'nvie/vim-flake8'
 Bundle 'vim-ruby/vim-ruby'
-Plugin 'xmledit'
-
+Plugin 'tomlion/vim-solidity'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
