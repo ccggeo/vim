@@ -6,8 +6,6 @@ set synmaxcol=2048
 "":set clipboard^=unnamed
 :nmap <F1> <nop>
 
-
-
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
@@ -60,6 +58,10 @@ let g:pymode_options_colorcolumn = 0
 ""map to F8
 nmap <F8> :TagbarToggle<CR>
 
+"" clock config
+let g:airline#extensions#clock#format = '%H:%M:%S'
+let g:airline#extensions#clock#updatetime = 1000
+
 set nocompatible              
 filetype off                  
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -89,10 +91,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'nvie/vim-flake8'
 Bundle 'vim-ruby/vim-ruby'
 Plugin 'tomlion/vim-solidity'
+Bundle 'myusuf3/numbers.vim'
+Plugin 'enricobacis/vim-airline-clock'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 let g:AutoClosePreserveDotReg = 0
 """" END Vundle Configuration 
-
-
