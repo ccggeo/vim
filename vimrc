@@ -18,6 +18,12 @@ nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+
 "f5 to execute
 nnoremap <silent> <F5> :!python %<CR>
 " ctrl-s to save 
@@ -47,7 +53,8 @@ let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 " let g:syntastic_enable_elixir_checker = 1
 " let g:syntastic_elixir_checkers = ["elixir"]
-
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
 
 "" Python mode config
 ""Disable rope to avoid hanging
@@ -57,10 +64,6 @@ let g:pymode_options_colorcolumn = 0
 ""tagbar config
 ""map to F8
 nmap <F8> :TagbarToggle<CR>
-
-"" clock config
-let g:airline#extensions#clock#format = '%H:%M:%S'
-let g:airline#extensions#clock#updatetime = 1000
 
 set nocompatible              
 filetype off                  
@@ -74,7 +77,7 @@ Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-syntastic/syntastic'
-Bundle 'klen/python-mode'
+""Bundle 'klen/python-mode'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -98,3 +101,5 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 let g:AutoClosePreserveDotReg = 0
 """" END Vundle Configuration 
+let g:airline#extensions#clock#format = '%H:%M:%S'
+let g:airline#extensions#clock#updatetime = 1000
