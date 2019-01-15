@@ -3,7 +3,7 @@ bundle=$HOME/.vim/bundle
 vundle=$bundle/Vundle.vim
 
 cp vimrc ~/.vimrc 
-
+cp colors ~/.vim/colors
 # Download "VundleVim/Vundle.vim" Vim Plugin Manager
 if [ ! -d $vundle ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git $vundle
