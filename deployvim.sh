@@ -10,4 +10,4 @@ if [ ! -d $vundle ]; then
 fi
 
 # PluginInstall: "VundleVim/Vundle.vim" plugin's install command.
-vim +PluginInstall +GoInstallBinaries +qall < /dev/tty
+vim +PluginInstall +GoInstallBinaries +qall 
