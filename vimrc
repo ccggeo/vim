@@ -4,9 +4,10 @@ set background=dark
 set t_Co=256
 set synmaxcol=2048
 
-""f-key bindings 
+""f-key bindings
 "":set clipboard^=unnamed
 :nmap <F1> <nop>
+
 "f5 to execute
 nnoremap <silent> <F5> :!python %<CR>
 
@@ -16,15 +17,8 @@ map <F7> mzgg=G`z
 ""tagbar config
 ""map to F8
 nmap <F8> :TagbarToggle<CR>
-
-
 ""yank text to clipboard
-:set clipboard=unnamedplus
 
-" ctrl-s to save 
-:nmap <c-s> :w<CR>
-" ctrl-q to quit without saving 
-:nmap <c-q> :q!<CR>
 set pastetoggle=<F10>
 
 ""Turn off arrow keys
@@ -42,6 +36,16 @@ map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
 map  <C-n> :tabnew<CR>
 
+"" Clear whitespace
+map <F12> :%s/\s\+$//e<CR>
+:set clipboard=unnamedplus
+
+" ctrl-s to save
+:nmap <c-S> :w<CR>
+
+" ctrl-q to quit without saving
+silent !stty -ixon > /dev/null 2>/dev/null
+map <C-Q> :q!<CR>
 let g:multi_cursor_use_default_mapping=0
 
 " Default mapping
@@ -55,7 +59,7 @@ let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
 ""Remove --Insert--
-set noshowmode 
+set noshowmode
 
 ""Clock config
 let g:airline#extensions#clock#format = '%H:%M:%S'
@@ -64,8 +68,8 @@ let g:airline#extensions#clock#updatetime = 1000
 ""Numbers always on
 :set number
 
-set nocompatible              
-filetype off                  
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')    " Use a shared folder instead of ~/.vimrc/bundle
 set visualbell
@@ -101,4 +105,4 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 filetype plugin indent on    " required
 let g:AutoClosePreserveDotReg = 0
-"""" END Vundle Configuration 
+"""" END Vundle Configuration
