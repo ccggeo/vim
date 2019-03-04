@@ -1,4 +1,5 @@
 let g:gruvbox_contrast_dark='hard'
+set cursorline
 colorscheme peaksea
 set background=dark
 set t_Co=256
@@ -27,6 +28,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+map <F3> :set invnumber<CR>
 " new tab ctrl-t
 :nmap <c-t> :tabe<CR>
 
