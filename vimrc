@@ -1,12 +1,52 @@
+"TAB settings.
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set showtabline=2
+set ruler
+set ignorecase
+" Make Vim to handle long lines nicely.
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
+set title
+set nobackup
+set noswapfile
 let g:gruvbox_contrast_dark='hard'
 set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
 colorscheme peaksea
 set background=dark
 set t_Co=256
 set synmaxcol=2048
 
+"Highlight section between brackets (do to opening bracket and highlight)
+nmap <leader>hp [{%v%<Home>
+
+""Turn off arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+" Working with split screen nicely
+" Resize Split When the window is resized"
+au VimResized * :wincmd =
+
+" Make Sure that Vim returns to the same line when we reopen a file"
+augroup line_return
+  au!
+  au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \ execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
 ""f-key bindings
-"":set clipboard^=unnamed
 :nmap <F1> <nop>
 
 "f5 to execute
@@ -22,11 +62,6 @@ nmap <F8> :TagbarToggle<CR>
 
 set pastetoggle=<F10>
 
-""Turn off arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
 
 map <F3> :set invnumber<CR>
 " new tab ctrl-t
