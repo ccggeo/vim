@@ -1,3 +1,19 @@
+"Mode Settings
+
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
+"Cursor settings:
+
+"  1 -> blinking block
+"  2 -> solid block 
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
+
+
 "TAB settings.
 set tabstop=2
 set shiftwidth=2
@@ -129,6 +145,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'stephpy/vim-yaml'
+Bundle 'chase/vim-ansible-yaml'
 Plugin 'morhetz/gruvbox'
 Plugin 'nvie/vim-flake8'
 Bundle 'vim-ruby/vim-ruby'
@@ -138,7 +156,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'ajh17/VimCompletesMe'
+Plugin 'ludovicchabant/vim-gutentags'
 call vundle#end()            " required
 filetype plugin indent on    " required
 let g:AutoClosePreserveDotReg = 0
