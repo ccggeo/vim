@@ -146,7 +146,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'stephpy/vim-yaml'
-Bundle 'chase/vim-ansible-yaml'
 Plugin 'morhetz/gruvbox'
 Plugin 'nvie/vim-flake8'
 Bundle 'vim-ruby/vim-ruby'
@@ -157,7 +156,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ajh17/VimCompletesMe'
-Plugin 'ludovicchabant/vim-gutentags'
 call vundle#end()            " required
 filetype plugin indent on    " required
 let g:AutoClosePreserveDotReg = 0
