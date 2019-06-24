@@ -1,3 +1,19 @@
+" security
+set modelines=0
+set dir=~/.vim/swp//
+set backupdir=~/.vim/backup//
+
+" search/file completion
+set wildmode=longest,list,full
+set wildmenu
+set scrolloff=3
+set hlsearch " highlight matches
+set incsearch " search as characters are entered
+set ignorecase " case insensitive, except...
+set smartcase " ...when we search for strings with caps
+set gdefault " s/search/replace/g globally by default
+set showmatch " highlight matching [{()}]
+
 "Mode Settings
 
 let &t_SI.="\e[5 q" "SI = INSERT mode
@@ -31,6 +47,14 @@ set title
 set nobackup
 set noswapfile
 let g:gruvbox_contrast_dark='hard'
+
+" git/fugitive
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gl :Glog<CR>
+nnoremap <Leader>ga :Git add %:p<CR><CR>
+
 set cursorline
 set ttyfast
 set ruler
