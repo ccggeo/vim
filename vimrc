@@ -159,6 +159,7 @@ Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'junegunn/gv.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Townk/vim-autoclose'
 Plugin 'vim-airline/vim-airline'
@@ -180,6 +181,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ajh17/VimCompletesMe'
+Plugin 'ekalinin/Dockerfile.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 let g:AutoClosePreserveDotReg = 0
