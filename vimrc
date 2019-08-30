@@ -1,7 +1,7 @@
 " security
 set modelines=0
 set dir=~/.vim/swp//
-set backupdir=~/.vim/backup//
+"set backupdir=~/.vim/backup//
 
 " search/file completion
 set wildmode=longest,list,full
@@ -181,6 +181,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ajh17/VimCompletesMe'
+Plugin 'chase/vim-ansible-yaml'
 Plugin 'ekalinin/Dockerfile.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
